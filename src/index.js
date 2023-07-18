@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Tab } from '@mui/material';
+import Box from '@mui/material';
+import Tabs from '@mui/material';
 
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
