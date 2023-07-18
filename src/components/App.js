@@ -2,26 +2,21 @@ import Header from './ui/Header';
 
 import { ThemeProvider } from '@mui/material/styles';
 import { theme } from './ui/Theme';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Test } from './Test';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Header />
-        <Switch>
-          <Route
-            exact
-            path="/"
-            component={() => {
-              return <div>Home</div>;
-            }}
-          />
+        <Routes>
+          <Route exact path="/" element={<Test />} />
 
           <Route
             exact
             path="/services"
-            component={() => {
+            element={() => {
               return <div>Services</div>;
             }}
           />
@@ -29,7 +24,7 @@ function App() {
           <Route
             exact
             path="/customsoftware"
-            component={() => {
+            element={() => {
               return <div>Custom Software</div>;
             }}
           />
@@ -37,7 +32,7 @@ function App() {
           <Route
             exact
             path="/mobileapps"
-            component={() => {
+            element={() => {
               return <div>Mobile Apps</div>;
             }}
           />
@@ -45,7 +40,7 @@ function App() {
           <Route
             exact
             path="/websites"
-            component={() => {
+            element={() => {
               return <div>Websites</div>;
             }}
           />
@@ -53,7 +48,7 @@ function App() {
           <Route
             exact
             path="/revolution"
-            component={() => {
+            element={() => {
               <div>The Revolution</div>;
             }}
           />
@@ -61,11 +56,11 @@ function App() {
           <Route
             exact
             path="/about"
-            component={() => {
+            element={() => {
               <div>About Us</div>;
             }}
           />
-        </Switch>
+        </Routes>
       </BrowserRouter>
     </ThemeProvider>
   );

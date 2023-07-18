@@ -3,6 +3,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { useScrollTrigger } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -70,11 +71,31 @@ export default function Header(props) {
               indicatorColor="secondary"
               textColor="secondary"
             >
-              <StyledTab label="Home" value={0} />
-              <StyledTab label="Services" value={1} />
-              <StyledTab label="The Revolution" value={2} />
-              <StyledTab label="About Us" value={3} />
-              <StyledTab label="Contact Us" value={4} />
+              <StyledTab label="Home" component={Link} value={0} to="/" />
+              <StyledTab
+                label="Services"
+                component={Link}
+                value={1}
+                to="/services"
+              />
+              <StyledTab
+                label="The Revolution"
+                component={Link}
+                value={2}
+                to="/revolution"
+              />
+              <StyledTab
+                label="About Us"
+                component={Link}
+                value={3}
+                to="/about"
+              />
+              <StyledTab
+                label="Contact Us"
+                component={Link}
+                value={4}
+                to="/contact"
+              />
             </TabContainer>
 
             <StyledButton variant="contained" color="secondary">
